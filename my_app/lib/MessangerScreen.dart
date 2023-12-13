@@ -3,143 +3,84 @@ import 'package:my_app/ButtonItem.dart';
 
 void main() {
   runApp(
-    MaterialApp(home: Scaffold(
+      MaterialApp(home: Scaffold(
 
-      appBar: AppBar(
-        backgroundColor: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
 
-        leading:  AvatarWithStatus(
-          image:  NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&usqp=CAU")
-          ,color: Colors.amber)
-        ,
-        title:  Text(
-        "Amal Magdi",
-        style: TextStyle(color: Colors.white,fontSize: 20),
-      ),
-      actions: [CircleAvatar(
-        backgroundColor: Colors.grey,
-      child: Icon(Icons.camera_alt_outlined, color: Colors.white,),)
-      ,
-        SizedBox(width: 8,),
-        CircleAvatar(
-          backgroundColor: Colors.grey,
-          child: Icon(Icons.edit, color: Colors.white,),)],),
-      body: Center(
+          leading:  AvatarWithStatus(
+            // image:  NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&usqp=CAU")
+              color: Colors.green)
+          ,
+          title:  Text(
+            "chats",
+            style: TextStyle(color: Colors.white,fontSize: 40),
+          ),
+          actions: [CircleAvatar(
+            backgroundColor: Colors.grey,
+            child: Icon(Icons.camera_alt_outlined, color: Colors.white,),)
+            ,
+            SizedBox(width: 8,),
+            CircleAvatar(
+              backgroundColor: Colors.grey,
+              child: Icon(Icons.edit, color: Colors.white,),)],),
+        body: Center(
 
-        //color: Colors.black87,
-        child: Container(
-          color: Colors.black,
-          width: double.infinity,
-          child: Padding(
-            padding: EdgeInsetsDirectional.all(20),
-            child: Column(
-              //padding: EdgeInsetsDirectional.all(15),
-              //mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // AvatarWithStatus(
-                // image:  NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&usqp=CAU")
-                // ,color: Colors.amber),
-                // SizedBox(height: 12,),
-                // Text(
-                //   "Amal Magdi",
-                //   style: TextStyle(color: Colors.white,fontSize: 20),
-                // ),
-                // SizedBox(height: 12,),
-                // Text(
-                //   "Amalmagdi@gmail.com",
-                //   style: TextStyle(color: Colors.grey,fontSize: 16),
-                // ),
-                // SizedBox(height: 12,),
-                // MaterialButton(onPressed: (){},
-                //   child: Container(
-                //     padding: EdgeInsetsDirectional.only(start: 20,end: 20,top: 10,bottom: 10),
-                //     decoration: BoxDecoration(
-                //     // border: Border.all()     ,
-                //       borderRadius:  BorderRadius.all(Radius.elliptical(20,20)),
-                //       color: Colors.amber,
-                //
-                //     ),
-                //
-                //   child: Text("update to pro",
-                //     style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black87,fontSize: 24),),),
-                //
-                // ),
-                // SizedBox(height: 30,),
+          //color: Colors.black87,
+          child: Container(
+            color: Colors.black,
+            width: double.infinity,
+            child: Padding(
+              padding: EdgeInsetsDirectional.all(7),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.elliptical(25,25)),
+                        ),
+                        prefixIcon: Icon(Icons.search),
+                        fillColor: Colors.grey,
+                        filled: true
+                    ),
+                  ),
 
-//                 MaterialButton(onPressed: (){},
-//                   child: Container(
-//                     padding: EdgeInsetsDirectional.only(start: 20,end: 20,top: 10,bottom: 10),
-//                     margin: EdgeInsetsDirectional.only(top: 10,bottom: 10),
-//                     decoration: BoxDecoration(
-//                       // border: Border.all()     ,
-//                       borderRadius:  BorderRadius.all(Radius.elliptical(20,20)),
-//                       color: Colors.grey,
-//
-//                     ),
-//
-//                     child: Row(
-//                       children: [
-//                         Icon(Icons.person,color: Colors.white,),
-//                         SizedBox(width: 10,),
-//                         Expanded(
-//                           child: Text("privacy",
-//                             style: TextStyle(color: Colors.white,fontSize: 20),),
-//                         ),
-//                         Icon(Icons.arrow_forward_ios,color: Colors.white,),
-//                       ],
-//                     ),),
-//
-//                 )
-//                 ,
-//                 MaterialButton(onPressed: (){},
-//                   child: Container(
-//                     padding: EdgeInsetsDirectional.only(start: 20,end: 20,top: 10,bottom: 10),
-//                     margin: EdgeInsetsDirectional.only(top: 10,bottom: 10),
-//                     decoration: BoxDecoration(
-//                       // border: Border.all()     ,
-//                       borderRadius:  BorderRadius.all(Radius.elliptical(20,20)),
-//                       color: Colors.grey,
-//
-//                     ),
-//
-//                     child: Row(
-//                       children: [
-//                         Icon(Icons.person,color: Colors.white,),
-//                         SizedBox(width: 10,),
-//                         Expanded(
-//                           child: Text("privacy",
-//                             style: TextStyle(color: Colors.white,fontSize: 20),),
-//                         ),
-//                         Icon(Icons.arrow_forward_ios,color: Colors.white,),
-//                       ],
-//                     ),)
-// ,
-//
-//
-//
-//                 ),
+                  SizedBox(height: 14,),
+                  SizedBox(
+                    height: 70,
+                    child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, position) {
+                          return AvatarWithStatus(
+                            // image:  NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&usqp=CAU")
+                            color: Colors.green,);},
+                        separatorBuilder:(context,index){return SizedBox();},
+                        itemCount: 10),
+                  ),
+                  SizedBox(height: 12,),
+                  Expanded(
+                    child: ListView.separated(
+                      itemCount: 18,
+
+                      itemBuilder: (context, position) {
+                        return
+                          ChatItem ();
+                      },
+                      separatorBuilder: (context,index){return SizedBox(height: 17,);},
+                    ),
+                  ),
 
 
-
-                ListView.builder(
-                  shrinkWrap:true,
-                  itemCount: 6,
-                  itemBuilder: (context, position) {
-                    return
-                      ChatItem extends st();
-                  },
-                ),
-
-              ],
+                ],
 
 
-      ),
+              ),
+            ),
           ),
         ),
-      ),
 
-    )
-    )
+      )
+      )
   );
 }
 
@@ -147,26 +88,41 @@ class ChatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      children: [AvatarWithStatus(
+        //  image:  NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&usqp=CAU")
+        color: Colors.green, raduis: 30,),
+        SizedBox(width: 12,),
+        Expanded(child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start
+          ,children: [
+          Text("Ahhmed Mohammed",style: TextStyle(color: Colors.white,fontSize: 18),),
+          SizedBox(height: 7,),
+          Text("welcome to flutter",style: TextStyle(color: Colors.white,fontSize: 18),)
 
+        ],)),
+        Text("11:30 AM",style: TextStyle(color: Colors.grey),)
+      ],
     );
 
   }
 }
 
 class AvatarWithStatus extends StatelessWidget {
-  ImageProvider image  = NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&usqp=CAU");
-  static const ImageProvider defaultImg = NetworkImage("");
+  ImageProvider? image  ;
+  //= NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8kiSH5ZSAcVoj3tAQQDoP_ux0sSricMyUg&usqp=CAU");
+  static const ImageProvider defaultImg = NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8kiSH5ZSAcVoj3tAQQDoP_ux0sSricMyUg&usqp=CAU");
   var color;
   static const defaultColor= Colors.transparent;
+  double? raduis;
 
 
   AvatarWithStatus({
     super.key,
-     ImageProvider image= defaultImg, Color  color=defaultColor})
-   {
-     this.image = image;
-     this.color=color;
-   }
+    ImageProvider image= defaultImg, Color  color=defaultColor,this.raduis})
+  {
+    this.image = image;
+    this.color=color;
+  }
 
 
 
@@ -178,18 +134,19 @@ class AvatarWithStatus extends StatelessWidget {
 
 
     return Stack(
-      children: [SizedBox(width: 90,height: 90,
-        child: CircleAvatar(
-          backgroundImage : image,
-             ),
-      ),
-      Positioned(
-          bottom: 2,right: 2,
-          child: SizedBox(
-        width: 20,height: 20,
-        child: CircleAvatar(backgroundColor: color,
-        ),
-      ))]
+        children: [//SizedBox(width: 90,height: 90,
+          CircleAvatar(
+            backgroundImage : image,
+            radius: this.raduis??45,
+          ),
+
+          Positioned(
+              bottom: 2,right: 2,
+              child: SizedBox(
+                width: 20,height: 20,
+                child: CircleAvatar(backgroundColor: color,
+                ),
+              ))]
     );
   }
 }
