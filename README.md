@@ -9,8 +9,7 @@ This project is a starting point for a Flutter application.
 ## Messenger Screen
 
 
-https://github.com/amalmagdy/flutterTraining/blob/main/screen%20shots/messenger.png 
-
+![Screenshot](screen shots/messenger.png)
 ## Running App Home Screen
 
-https://github.com/amalmagdy/flutterTraining/blob/main/screen%20shots/RunApp_Home.png
+![Screenshot](screen shots/Run App Home.png)
