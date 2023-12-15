@@ -12,4 +12,4 @@ This project is a starting point for a Flutter application.
 ![Screenshot](screen shots/messenger.png)
 ## Running App Home Screen
 
-![Screenshot](screen shots/Run App Home.png)
+<img src="screen shots/Run App Home.png" width="128"/>
